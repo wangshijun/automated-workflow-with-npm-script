@@ -1,5 +1,10 @@
-const str = 'some value';
+const add = (a, b) => {
+  if (typeof a === 'number' && typeof b === 'number') {
+    return a + b;
+  }
 
-function fn(){
-  console.log('some log');
-}
+  return NaN;
+};
+
+module.exports = { add  };
+
