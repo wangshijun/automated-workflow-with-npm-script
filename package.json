@@ -7,6 +7,7 @@
     "eslint": "eslint *.js",
     "stylelint": "stylelint *.less",
     "jsonlint": "jsonlint --quiet *.json",
+    "markdownlint": "markdownlint *.md",
     "test": "mocha tests/"
   },
   "keywords": [],
@@ -16,6 +17,7 @@
     "chai": "^4.1.2",
     "eslint": "^4.11.0",
     "jsonlint": "^1.6.2",
+    "markdownlint-cli": "^0.5.0",
     "mocha": "^4.0.1",
     "stylelint": "^8.2.0",
     "stylelint-config-standard": "^17.0.0"
