@@ -1,0 +1,16 @@
+{
+  "name": "hello-npm-script",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint *.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "wangshijun <wangshijun2010@gmail.com> (http://github.com/wangshijun)",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.11.0"
+  }
+}
