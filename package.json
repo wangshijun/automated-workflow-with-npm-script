@@ -7,7 +7,7 @@
     "eslint": "eslint *.js",
     "stylelint": "stylelint *.less",
     "jsonlint": "jsonlint --quiet *.json",
-    "markdownlint": "markdownlint *.md",
+    "markdownlint": "markdownlint --config .markdownlint.json *.md",
     "test": "mocha tests/"
   },
   "keywords": [],
