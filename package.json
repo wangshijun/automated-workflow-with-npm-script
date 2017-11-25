@@ -8,7 +8,7 @@
     "lint:css": "stylelint *.less",
     "lint:json": "jsonlint --quiet *.json",
     "lint:markdown": "markdownlint --config .markdownlint.json *.md",
-    "test": "npm run lint:js && npm run lint:css && npm run lint:json && npm run lint:markdown && mocha tests/"
+    "test": "npm run lint:js & npm run lint:css & npm run lint:json & npm run lint:markdown & mocha tests/ & wait"
   },
   "keywords": [],
   "author": "wangshijun <wangshijun2010@gmail.com> (http://github.com/wangshijun)",
@@ -19,6 +19,7 @@
     "jsonlint": "^1.6.2",
     "markdownlint-cli": "^0.5.0",
     "mocha": "^4.0.1",
+    "npm-run-all": "^4.1.2",
     "stylelint": "^8.2.0",
     "stylelint-config-standard": "^17.0.0"
   }
