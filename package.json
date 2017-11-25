@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "eslint": "eslint *.js",
-    "stylelint": "stylelint *.less",
-    "jsonlint": "jsonlint --quiet *.json",
-    "markdownlint": "markdownlint --config .markdownlint.json *.md",
+    "lint:js": "eslint *.js",
+    "lint:css": "stylelint *.less",
+    "lint:json": "jsonlint --quiet *.json",
+    "lint:markdown": "markdownlint --config .markdownlint.json *.md",
     "test": "mocha tests/"
   },
   "keywords": [],
