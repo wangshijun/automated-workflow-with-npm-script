@@ -4,13 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "npm-run-all --parallel lint:*",
     "lint:js": "eslint *.js",
     "lint:js:fix": "npm run lint:js -- --fix",
     "lint:css": "stylelint *.less",
     "lint:json": "jsonlint --quiet *.json",
     "lint:markdown": "markdownlint --config .markdownlint.json *.md",
-    "mocha": "mocha tests/",
-    "test": "# 运行所有代码检查和单元测试 \n    npm-run-all --parallel lint:* mocha"
+    "pretest": "npm run lint",
+    "test": "mocha tests/",
+    "precover": "rm -rf coverage",
+    "cover": "nyc --reporter=html npm test",
+    "postcover": "rm -rf .nyc_output && opn coverage/index.html"
   },
   "keywords": [],
   "author": "wangshijun <wangshijun2010@gmail.com> (http://github.com/wangshijun)",
@@ -22,7 +26,15 @@
     "markdownlint-cli": "^0.5.0",
     "mocha": "^4.0.1",
     "npm-run-all": "^4.1.2",
+    "nyc": "^11.3.0",
+    "opn-cli": "^3.1.0",
     "stylelint": "^8.2.0",
     "stylelint-config-standard": "^17.0.0"
+  },
+  "nyc": {
+    "exclude": [
+      "**/*.spec.js",
+      ".*.js"
+    ]
   }
 }
