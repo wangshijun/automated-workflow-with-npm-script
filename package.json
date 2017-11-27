@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "",
   "main": "index.js",
+  "config": {
+    "port": 3000
+  },
   "scripts": {
     "lint": "npm-run-all --parallel lint:*",
     "lint:js": "eslint *.js",
@@ -15,7 +18,9 @@
     "cover": "nyc --reporter=html npm test",
     "cover:cleanup": "rm -rf coverage && rm -rf .nyc_output",
     "cover:archive": "mkdir -p coverage_archive/$npm_package_version && cp -r coverage/* coverage_archive/$npm_package_version",
-    "postcover": "npm run cover:archive && npm run cover:cleanup && opn coverage_archive/$npm_package_version/index.html"
+    "cover:serve": "http-server coverage_archive/$npm_package_version -p $npm_package_config_port",
+    "cover:open": "opn http://localhost:$npm_package_config_port",
+    "postcover": "npm-run-all cover:archive cover:cleanup --parallel cover:serve cover:open"
   },
   "keywords": [],
   "author": "wangshijun <wangshijun2010@gmail.com> (http://github.com/wangshijun)",
@@ -23,6 +28,7 @@
   "devDependencies": {
     "chai": "^4.1.2",
     "eslint": "^4.11.0",
+    "http-server": "^0.10.0",
     "jsonlint": "^1.6.2",
     "markdownlint-cli": "^0.5.0",
     "mocha": "^4.0.1",
