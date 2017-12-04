@@ -14,7 +14,7 @@
     "lint:json": "jsonlint --quiet *.json",
     "lint:markdown": "markdownlint --config .markdownlint.json *.md",
     "pretest": "npm run lint",
-    "test": "mocha tests/",
+    "test": "NODE_ENV=test mocha tests/",
     "cover": "nyc --reporter=html npm test",
     "cover:cleanup": "rm -rf coverage && rm -rf .nyc_output",
     "cover:archive": "mkdir -p coverage_archive/$npm_package_version && cp -r coverage/* coverage_archive/$npm_package_version",
