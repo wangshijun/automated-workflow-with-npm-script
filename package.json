@@ -14,7 +14,7 @@
     "lint:json": "jsonlint --quiet *.json",
     "lint:markdown": "markdownlint --config .markdownlint.json *.md",
     "pretest": "npm run lint",
-    "test": "NODE_ENV=test mocha tests/",
+    "test": "cross-env NODE_ENV=test mocha tests/",
     "cover": "nyc --reporter=html npm test",
     "cover:cleanup": "rm -rf coverage && rm -rf .nyc_output",
     "cover:archive": "cross-var \"mkdir -p coverage_archive/$npm_package_version && cp -r coverage/* coverage_archive/$npm_package_version\"",
@@ -27,6 +27,7 @@
   "license": "MIT",
   "devDependencies": {
     "chai": "^4.1.2",
+    "cross-env": "^5.1.1",
     "cross-var": "^1.1.0",
     "eslint": "^4.11.0",
     "http-server": "^0.10.0",
