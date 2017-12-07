@@ -15,13 +15,9 @@
     "lint:markdown": "markdownlint --config .markdownlint.json *.md",
     "pretest": "npm run lint",
     "test": "cross-env NODE_ENV=test mocha tests/",
-    "cover": "nyc --reporter=html npm test",
-    "cover:cleanup": "rimraf coverage && rimraf .nyc_output",
-    "cover:archive": "cross-var \"make-dir coverage_archive/$npm_package_version && cpr coverage/* coverage_archive/$npm_package_version -o\"",
-    "cover:serve": "cross-var http-server coverage_archive/$npm_package_version -p $npm_package_config_port",
-    "cover:open": "cross-var opn http://localhost:$npm_package_config_port",
-    "precover": "npm run cover:cleanup",
-    "postcover": "npm-run-all cover:archive --parallel cover:serve cover:open"
+    "cover": "scripty",
+    "cover:serve": "scripty",
+    "cover:open": "scripty"
   },
   "keywords": [],
   "author": "wangshijun <wangshijun2010@gmail.com> (http://github.com/wangshijun)",
@@ -41,6 +37,7 @@
     "nyc": "^11.3.0",
     "opn-cli": "^3.1.0",
     "rimraf": "^2.6.2",
+    "scripty": "^1.7.2",
     "stylelint": "^8.2.0",
     "stylelint-config-standard": "^17.0.0"
   },
