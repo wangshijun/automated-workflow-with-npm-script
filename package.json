@@ -15,7 +15,7 @@
     "lint:markdown": "markdownlint --config .markdownlint.json *.md",
     "pretest": "npm run lint",
     "test": "cross-env NODE_ENV=test mocha tests/",
-    "cover": "scripty",
+    "cover": "node scripts/cover.js",
     "cover:serve": "scripty",
     "cover:open": "scripty"
   },
@@ -24,6 +24,7 @@
   "license": "MIT",
   "devDependencies": {
     "chai": "^4.1.2",
+    "chalk": "^2.3.0",
     "cpr": "^3.0.1",
     "cross-env": "^5.1.1",
     "cross-var": "^1.1.0",
@@ -38,6 +39,7 @@
     "opn-cli": "^3.1.0",
     "rimraf": "^2.6.2",
     "scripty": "^1.7.2",
+    "shelljs": "^0.7.8",
     "stylelint": "^8.2.0",
     "stylelint-config-standard": "^17.0.0"
   },
