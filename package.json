@@ -20,7 +20,10 @@
     "watch:lint": "onchange -i \"**/*.js\" \"**/*.less\" -- npm run lint",
     "cover": "node scripts/cover.js",
     "cover:serve": "scripty",
-    "cover:open": "scripty"
+    "cover:open": "scripty",
+    "client": "npm-run-all --parallel client:*",
+    "client:reload-server": "livereload client/",
+    "client:static-server": "http-server client/"
   },
   "keywords": [],
   "author": "wangshijun <wangshijun2010@gmail.com> (http://github.com/wangshijun)",
@@ -35,6 +38,7 @@
     "eslint": "^4.11.0",
     "http-server": "^0.10.0",
     "jsonlint": "^1.6.2",
+    "livereload": "^0.6.3",
     "make-dir-cli": "^1.0.0",
     "markdownlint-cli": "^0.5.0",
     "mocha": "^4.0.1",
