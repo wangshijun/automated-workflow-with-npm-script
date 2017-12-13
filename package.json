@@ -7,6 +7,8 @@
     "port": 3000
   },
   "scripts": {
+    "precommit": "npm run lint",
+    "prepush": "npm run test",
     "lint": "npm-run-all --parallel lint:*",
     "lint:js": "eslint *.js",
     "lint:js:fix": "npm run lint:js -- --fix",
@@ -37,7 +39,9 @@
     "cross-var": "^1.1.0",
     "eslint": "^4.11.0",
     "http-server": "^0.10.0",
+    "husky": "^0.14.3",
     "jsonlint": "^1.6.2",
+    "lint-staged": "^6.0.0",
     "livereload": "^0.6.3",
     "make-dir-cli": "^1.0.0",
     "markdownlint-cli": "^0.5.0",
