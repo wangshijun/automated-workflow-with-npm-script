@@ -7,7 +7,7 @@
     "port": 3000
   },
   "scripts": {
-    "precommit": "npm run lint",
+    "precommit": "lint-staged",
     "prepush": "npm run test",
     "lint": "npm-run-all --parallel lint:*",
     "lint:js": "eslint *.js",
@@ -26,6 +26,13 @@
     "client": "npm-run-all --parallel client:*",
     "client:reload-server": "livereload client/",
     "client:static-server": "http-server client/"
+  },
+  "lint-staged": {
+    "*.js": "eslint",
+    "*.less": "stylelint",
+    "*.css": "stylelint",
+    "*.json": "jsonlint --quiet",
+    "*.md": "markdownlint --config .markdownlint.json"
   },
   "keywords": [],
   "author": "wangshijun <wangshijun2010@gmail.com> (http://github.com/wangshijun)",
