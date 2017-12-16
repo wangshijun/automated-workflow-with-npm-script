@@ -4,6 +4,10 @@
 body {
   background: @background;
   display: flex;
+  flex-direction: column;
+  width: 854px;
+  margin: 0 auto;
+  align-items: center;
 }
 
 h2 {
@@ -12,7 +16,7 @@ h2 {
 }
 
 .schedule {
-  background: url('./assets/images/schedule.png') center center no-repeat;
+  background: url('../images/schedule.png') center center no-repeat;
   width: 100%;
-  height: 240px;
+  height: 614px;
 }
