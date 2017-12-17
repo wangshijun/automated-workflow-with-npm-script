@@ -25,7 +25,13 @@
     "cover:open": "scripty",
     "client": "npm-run-all --parallel client:*",
     "client:reload-server": "livereload client/",
-    "client:static-server": "http-server client/"
+    "client:static-server": "http-server client/",
+    "prebuild": "rm -rf dist && mkdir -p dist/{images,styles,scripts}",
+    "build": "scripty",
+    "build:images": "scripty",
+    "build:scripts": "scripty",
+    "build:styles": "scripty",
+    "build:hash": "scripty"
   },
   "lint-staged": {
     "*.js": "eslint",
@@ -44,10 +50,14 @@
     "cpr": "^3.0.1",
     "cross-env": "^5.1.1",
     "cross-var": "^1.1.0",
+    "cssmin": "^0.4.3",
     "eslint": "^4.11.0",
+    "hashmark": "^5.0.0",
     "http-server": "^0.10.0",
     "husky": "^0.14.3",
+    "imagemin-cli": "^3.0.0",
     "jsonlint": "^1.6.2",
+    "less": "^2.7.3",
     "lint-staged": "^6.0.0",
     "livereload": "^0.6.3",
     "make-dir-cli": "^1.0.0",
@@ -57,11 +67,13 @@
     "nyc": "^11.3.0",
     "onchange": "^3.3.0",
     "opn-cli": "^3.1.0",
+    "replaceinfiles": "^1.1.4",
     "rimraf": "^2.6.2",
     "scripty": "^1.7.2",
     "shelljs": "^0.7.8",
     "stylelint": "^8.2.0",
-    "stylelint-config-standard": "^17.0.0"
+    "stylelint-config-standard": "^17.0.0",
+    "uglify-es": "^3.2.2"
   },
   "nyc": {
     "exclude": [
