@@ -9,10 +9,10 @@ app.use(morgan('combined'));
 
 app.listen(port, err => {
   if (err) {
-    console.error('server start error', err);
+    console.error('server start error', err); // eslint-disable-line
     process.exit(1);
   }
 
-  console.log(`server started at port ${port}`);
+  console.log(`server started at port ${port}`);  // eslint-disable-line
 });
 
