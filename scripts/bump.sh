@@ -23,9 +23,5 @@ fi
 echo "major=$major, minor=$minor, patch=$patch, release=$release"
 
 # upgrade version
-npm version $release
-
-# sync tags with git
-git push
-git push --tags
+npm run release:$release
 
