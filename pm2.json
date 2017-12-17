@@ -1,0 +1,19 @@
+{
+  "apps": [
+    {
+      "name": "npm-script-workflow",
+      "script": "./server.js",
+      "out_file": "./logs/stdout.log",
+      "error_file": "./logs/stderr.log",
+      "log_date_format": "YYYY-MM-DD HH:mm:ss",
+      "instances": 1,
+      "exec_mode": "fork",
+      "max_memory_restart": "800M",
+      "merge_logs": true,
+      "env": {
+        "NODE_ENV": "production",
+        "PORT": 8080
+      }
+    }
+  ]
+}
