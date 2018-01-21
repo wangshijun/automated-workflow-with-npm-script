@@ -1,4 +1,6 @@
-for file in client/styles/*.css
+for file in client/styles/*.less
 do
-  lessc $file | cssmin > dist/styles/$(basename $file)
+  filename=$(basename $file)
+  distpath=$(echo $filename | sed 's/\.less$/.css/')
+  lessc $file | cssmin > dist/styles/$distpath
 done
