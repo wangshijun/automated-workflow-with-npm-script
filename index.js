@@ -1,5 +1,6 @@
+
 const str = 'some value';
 
-function fn(){
+function fn() {
   console.log('some log');
 }

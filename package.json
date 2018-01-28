@@ -1,16 +1,21 @@
 {
   "name": "hello-npm-script",
   "version": "0.1.0",
-  "description": "",
+  "description": "hello npm script",
   "main": "index.js",
   "scripts": {
-    "eslint": "eslint *.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "eslint": "eslint **.js",
+    "test": "echo \"Error: no test specified\" &&exit 1"
   },
-  "keywords": [],
-  "author": "wangshijun <wangshijun2010@gmail.com> (http://github.com/wangshijun)",
+  "keywords": [
+    "npm",
+    "script",
+    "workflow"
+  ],
+  "author": "luozhijun <lzj586586@163.com> (https://github.com/luozhijunc)",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^4.11.0"
+    "echo": "^0.1.9",
+    "eslint": "^4.16.0"
   }
 }
